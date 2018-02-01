@@ -1,0 +1,20 @@
+{
+  "index.html": {
+    "refer": [
+      "book.html"
+    ],
+    "resources": []
+  },
+  "book.html": {
+    "refer": [
+      "index.html",
+      "hook_content.html"
+    ],
+    "resources": []
+  },
+  "hook_content.html": {
+    "refer": [
+      "book.html"
+    ]
+  }
+}

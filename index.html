@@ -1,0 +1,473 @@
+<!doctype html>
+
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Description" content="一个简约而不简单的小说在线阅读网站，通过领先的设计，友好地兼容电脑、平板、手机等各类终端，方便您随时随地享受美妙阅读时光。" />
+		<!-- disable iPhone inital scale -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="applicable-device" content="pc,mobile">
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<link rel="shortcut icon" href="http://www.luoxia.com/favicon.ico" />
+
+		<!-- main css -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<!-- media queries css -->
+		<link rel="stylesheet" href="css/queries.css" type="text/css" />
+		<!--<link href="css/mui.min.css" rel="stylesheet" />-->
+		<style>
+			body {
+				padding-bottom: 10px;
+			}
+			
+			.mui-bar .mui-title {
+				right: 40px;
+				left: 40px;
+				display: inline-block;
+				overflow: hidden;
+				margin: 0;
+				text-overflow: ellipsis;
+			}
+			
+			.mui-title {
+				font-size: 20px;
+				font-weight: 500;
+				line-height: 44px;
+				position: absolute;
+				display: block;
+				margin: 0 -10px;
+				padding: 0;
+				text-align: center;
+				white-space: nowrap;
+				color: #000;
+			}
+			
+		</style>
+		<!-- html5.js for IE less than 9 -->
+		<!--[if lt IE 9]>
+	<script src="http://7xky9t.com1.z0.glb.clouddn.com/html5.js"></script>
+<![endif]-->
+
+		<!-- css3-mediaqueries.js for IE less than 9 -->
+		<!--[if lt IE 9]>
+	<script src="http://7xky9t.com1.z0.glb.clouddn.com/css3-mediaqueries.js"></script>
+<![endif]-->
+		<!-- Include jQuery -->
+		<script src="http://7xky9t.com1.z0.glb.clouddn.com/jquery1.42.min.js"></script>
+		<!-- Include the Sidr JS -->
+		<script src="http://7xky9t.com1.z0.glb.clouddn.com/jquery.sidr.min.js"></script>
+		<script src="http://7xky9t.com1.z0.glb.clouddn.com/script.js"></script>
+		<script src="http://7xky9t.com1.z0.glb.clouddn.com/TouchSlide.1.1.js"></script>
+	</head>
+
+	<body class="bgw">
+
+		<!--<header class="mui-bar mui-bar-nav clearfix">
+			<a class="mui-action-back mui-icon mui-pull-left"><</a>
+			<h1 id="hgroup" class="mui-title">即刻阅读</h1>
+			<span href="#sidr-right" id="simple-menu"></span>
+		</header>-->
+		<header style="position: fixed;
+    right: 0;
+    left: 0;" id="header" class="clearfix mui-bar mui-bar-nav">
+
+			<hgroup id="hgroup" class="clearfix">
+
+				<h1 id="" class="mui-title" style="margin-top: 10px;">
+				<a href="http://www.luoxia.com">即刻阅读</a></h1>
+				<div id="sform" class="">
+					<form id="searchform" method="get" action="http://www.luoxia.com" class="clearfix">
+						<input type="search" id="s" class="txt" name="s" placeholder="" value="">
+						<input id="searchsubmit" class="submit" type="submit" value="">
+					</form>
+				</div>
+				<span href="#sidr-right" id="simple-menu" ></span>
+				<nav id="bcrumb" class="bcrumb" style="display: none;">
+				<span><a href="http://www.luoxia.com">首页</a></span><span>&gt;</span>
+				<span><a href="http://www.luoxia.com/chuqiao/" title="查看特工皇妃楚乔传中的全部文章" rel="category tag">特工皇妃楚乔传</a></span><span>&gt;</span>
+				<span><a href="http://www.luoxia.com/chuqiao/54673.htm">紫玉兰诔 · 六</a>&nbsp;</span>
+				</nav>
+			</hgroup>
+		</header>
+		<nav id="sidr" class="sidr left nav">
+			<ul id="main-nav" class="clearfix main-nav menu">
+				<li class="cat-item current-cat-parent">
+					<a rel="nofollow" href="http://www.luoxia.com">首页</a>
+				</li>
+				<li>
+					<a href="http://www.luoxia.com/top/" title="最新小说排行榜2015">小说排行榜</a>
+					<ul class="sub-menu">
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/indb/" title="小说资料库">小说资料库</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a class="pr" href="http://www.luoxia.com/hot/" title="热门小说">热门小说<sup></sup></a>
+					<ul class="sub-menu">
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/daomu/" title="盗墓笔记小说">盗墓笔记</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/guichui/" title="鬼吹灯小说">鬼吹灯</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/zhuxian/" title="诛仙 青云志"><strong>诛仙</strong></a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/muyun/" title="九州 · 海上牧云记"><strong>海上牧云记</strong></a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/ruyi/" title="后宫 · 如懿传">如懿传</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.luoxia.com/jingdian/" title="经典小说推荐">经典小说</a>
+					<ul class="sub-menu">
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/tangmen/" title="斗罗大陆II绝世唐门">绝世唐门</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/doupo/" title="斗破苍穹">斗破苍穹</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/xiaobing/" title="小兵传奇">小兵传奇</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/piaomiao/" title="飘邈之旅">飘邈之旅</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.luoxia.com/jinyong/" title="金庸作品集"> 金庸作品集 </a>
+					<ul class="sub-menu">
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/shediao/" title="射雕英雄传">射雕英雄传</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/shendiao/" title="神雕侠侣">神雕侠侣</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/yitian/" title="倚天屠龙记">倚天屠龙记</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/tianlong/" title="天龙八部">天龙八部</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/xiaoao/" title="笑傲江湖">笑傲江湖</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/luding/" title="鹿鼎记">鹿鼎记</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.luoxia.com/hao/" title="豆瓣高分榜">豆瓣高分榜</a>
+					<ul class="sub-menu">
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/baiye/" title="白夜行小说">白夜行</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/yongheng/" title="永恒的终结">永恒的终结</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/jieyou/" title="解忧杂货店">解忧杂货店</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/zuihao/" title="最好金龟换酒">最好金龟换酒</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.luoxia.com/fanruo/" title="泛若不系之舟">泛若不系之舟</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="http://www.luoxia.com/yuanzhu/" title="热门影视原著选读">影视原著</a>
+				</li>
+				<li>
+					<a rel="nofollow" href="http://www.luoxia.com/notice/">帮助</a>
+				</li>
+			</ul>
+		</nav>
+		<div id="content" style="padding-top: 30px;"></div>
+		<div id="mianbao" class="breadcrumb clearfix" style="padding-top: 60px;">
+			<div class="bc-div"></div>
+		</div>
+		<div id="content-list" style="display: none;"></div>
+		<div id="pagewrap">
+			<article style="display: none;" class="post clearfix"></article>
+		</div>		
+		<span id="gotop" href="javascript:void(0)"></span>
+		<div id="code"></div>
+		<div id="code_img"></div>
+		<div id="sidr-right" class="sidr right" style="display: none; right: 0px;">
+			<div class="sidr-inner">
+				<form id="sidr-id-searchform" method="get" action="http://www.luoxia.com" class="sidr-class-clearfix">
+					<input type="search" id="sidr-id-s" class="sidr-class-txt" name="s" placeholder="" value="">
+					<input id="sidr-id-searchsubmit" class="sidr-class-submit" type="submit" value="">
+				</form>
+			</div>
+			<div class="sidr-inner">
+				<ul id="sidr-id-main-nav" class="sidr-class-clearfix sidr-class-main-nav sidr-class-menu">
+					<li class="sidr-class-cat-item sidr-class-current-cat-parent">
+						<a rel="nofollow" href="http://www.luoxia.com">首页</a>
+					</li>
+					<li>
+						<a href="http://www.luoxia.com/top/" title="最新小说排行榜2015">小说排行榜</a>
+						<ul class="sidr-class-sub-menu">
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/indb/" title="小说资料库">小说资料库</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="sidr-class-pr" href="http://www.luoxia.com/hot/" title="热门小说">热门小说<sup></sup></a>
+						<ul class="sidr-class-sub-menu">
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/daomu/" title="盗墓笔记小说">盗墓笔记</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/guichui/" title="鬼吹灯小说">鬼吹灯</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/zhuxian/" title="诛仙 青云志"><strong>诛仙</strong></a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/muyun/" title="九州 · 海上牧云记"><strong>海上牧云记</strong></a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/ruyi/" title="后宫 · 如懿传">如懿传</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.luoxia.com/jingdian/" title="经典小说推荐">经典小说</a>
+						<ul class="sidr-class-sub-menu">
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/tangmen/" title="斗罗大陆II绝世唐门">绝世唐门</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/doupo/" title="斗破苍穹">斗破苍穹</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/xiaobing/" title="小兵传奇">小兵传奇</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/piaomiao/" title="飘邈之旅">飘邈之旅</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.luoxia.com/jinyong/" title="金庸作品集"> 金庸作品集 </a>
+						<ul class="sidr-class-sub-menu">
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/shediao/" title="射雕英雄传">射雕英雄传</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/shendiao/" title="神雕侠侣">神雕侠侣</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/yitian/" title="倚天屠龙记">倚天屠龙记</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/tianlong/" title="天龙八部">天龙八部</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/xiaoao/" title="笑傲江湖">笑傲江湖</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/luding/" title="鹿鼎记">鹿鼎记</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.luoxia.com/hao/" title="豆瓣高分榜">豆瓣高分榜</a>
+						<ul class="sidr-class-sub-menu">
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/baiye/" title="白夜行小说">白夜行</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/yongheng/" title="永恒的终结">永恒的终结</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/jieyou/" title="解忧杂货店">解忧杂货店</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/zuihao/" title="最好金龟换酒">最好金龟换酒</a>
+							</li>
+							<li>
+								<a target="_blank" href="http://www.luoxia.com/fanruo/" title="泛若不系之舟">泛若不系之舟</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://www.luoxia.com/yuanzhu/" title="热门影视原著选读">影视原著</a>
+					</li>
+					<li>
+						<a rel="nofollow" href="http://www.luoxia.com/notice/">帮助</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/naxhr.js"></script>
+		<script type="text/javascript" src="js/luoxia.js"></script>
+		<script type="text/javascript" src="js/LocalCache.js"></script>
+		<script type="text/javascript" src="js/jquery.md5.js"></script>
+		<script type="text/javascript" src="js/mobile/layer.js"></script>
+		<script type="text/javascript" src="js/Rhui.js"></script>
+		<script type="text/javascript">
+			var reg = /[0-9]+.htm/g;
+			var indexUrl = "http://www.luoxia.com";
+			//indexUrl = "http://www.luoxia.com/chuqiao/";
+			//indexUrl = "http://www.luoxia.com/jinyong/";
+			//indexUrl = "http://www.luoxia.com/shediao/8265.htm";
+			function b() {
+				h = $(window).height();
+				t = $(document).scrollTop();
+				if(t > h) {
+					$('#gotop').show();
+				} else {
+					$('#gotop').hide();
+				}
+			}
+			$(document).ready(function(e) {
+				layer.open({
+						type: 2
+					}
+
+				);
+				b();
+				$('#gotop').click(function() {
+					//$(document).scrollTop(0);	
+					$('html,body').animate({
+						scrollTop: '0px'
+					}, 200);
+				});
+				$('#code').hover(function() {
+					$(this).attr('id', 'code_hover');
+					$('#code_img').show();
+				}, function() {
+					$(this).attr('id', 'code');
+					$('#code_img').hide();
+				});
+				$('body').rhuiSwipe('swipeLeft', function(event) {
+					$.sidr("open","sidr-right");
+				});
+				$('body').rhuiSwipe('swipeRight', function(event) {
+					$.sidr("close","sidr-right");
+				});
+					
+			});
+			$(window).scroll(function(e) {
+				b();
+			});
+			(function($m, xhr, $, layer) {
+				var breadcrumb_url = localStorage.getItem("breadcrumb_url") || indexUrl;
+				
+				$m.plusReady(function() {
+					xhr.send({
+						url: breadcrumb_url,
+						callback: call,
+						async: false
+					});
+					
+					$m('body').on('tap', 'a', function() {
+						var url = getUrlByA(this);
+						if(url == false || url == breadcrumb_url) {
+							return;
+						}
+						localStorage.setItem("breadcrumb_url", url);
+						document.location.reload();
+						return;
+					});
+				});
+				var call = function(str, url) {
+					str = str.replace("width=device-width; initial-scale=1.0", "width=device-width,initial-scale=1.0");
+					str = str.replace(/script/g, "noscript");
+					var jstr = $(str);
+					if(url == indexUrl) {
+						rende(jstr);
+						layer.close(0);
+						return;
+					}
+					if(reg.test(url)){
+						rendeBookContent(jstr);
+						layer.close(0);
+						return;
+					}
+					var nav = jstr.find("header").find("nav");
+					var book_img_div = jstr.find("div").find(".book-img");
+					var cat_title_book_list = jstr.find("h1").get(1);
+					var tempWrap = jstr.find("div").find(".bd").find("li");
+					if(tempWrap.length>0) { //首页
+							
+					} else if(book_img_div.length>0) { //图书
+						rendeBook(jstr);
+					}else if($(cat_title_book_list).length>0){//列表
+						rendeBookList(jstr);
+					}
+					layer.close(0);
+				};
+				var rende = function(jstr) {
+					var htm = "";
+					jstr.find("div").each(function() {
+						if($(this).attr("id") == "noteScroll") {
+							htm = $(this).parent().parent().html();
+							return true;
+						}
+					});
+					$("#content").html(htm);
+					$("#content-list").html('');
+				};
+				var rendeBook = function(jstr) {
+					var htm = "";
+					jstr.find("div").each(function() {
+						if($(this).hasClass("book-img")) {
+							htm = $(this).parent().parent().html();
+							return true;
+						} else if($(this).hasClass("pop-books2")) {
+							htm = $(this).parent().html();
+							return true;
+						} else if($(this).hasClass("bc-div")){
+							var mu = $(this).html().replace(/落霞小说网/g,"首页");
+							$(".bc-div").html(mu);
+						}
+					});
+					$("#content").hide();
+					$("#content-list").html(htm);
+					$("#content-list").show();
+				};
+				var rendeBookList = function(jstr){
+					rendeBook(jstr);
+				};
+				var rendeBookContent = function(jstr){
+					var htm = "";
+					htm = jstr.find("article").html();
+					var navHtm = "";
+					jstr.find("nav").each(function(){
+						if($(this).hasClass("bcrumb")){
+							navHtm = $(this).html();
+						}
+					});
+					$("article").html(htm);
+					$("#content").hide();
+					$("#content-list").hide();
+					$("article").show();
+				}
+				var getUrlByA = function(a) {
+					var url = $(a).attr("href");
+					if(url || url.indexOf("javascript") < 0) {
+						return url;
+					}
+					return false;
+
+				}
+			})(mui, naxhr, jQuery, layer);
+		</script>
+	</body>
+
+</html>
